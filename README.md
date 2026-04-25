@@ -99,4 +99,3 @@ flutter build apk --release
 
 ## 📥 Download APK
 
-👉 [Download Contacts App](https://github.com/amaanali444/contacts-assignment/releases/latest)
