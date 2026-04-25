@@ -1,131 +1,98 @@
-Contacts App (Flutter)
+# 📱 Contacts App (Flutter)
 
-A simple Contacts application built using Flutter and SQLite.
-The app is inspired by Google Contacts and supports contact management with a clean Material 3 UI.
+A modern contact management application built with Flutter using **Material 3 design** and **SQLite local database**.
 
-Features
-View all contacts
-Add new contacts
-Edit existing contacts
-Delete contacts with confirmation dialog
-Mark / unmark favorite contacts
-Separate Favorites screen
-Search contacts by:
-Name
-Phone number
-Email
-View detailed contact profile
-Call contact directly
-Send SMS
-Send Email
-Empty state handling
-Loading and error handling
-Responsive UI
-Tech Stack
-Flutter
-Dart
-SQLite
-flutter_bloc (State Management)
-go_router (Navigation)
-equatable
-url_launcher
-Material 3 UI
-Architecture
+---
 
-The project follows clean layered architecture.
+## ✨ Features
 
-lib/
-│
-├── app/
-│   └── router/
-│
-├── core/
-│   ├── helpers/
-│   ├── theme/
-│   └── utils/
-│
-├── data/
-│   ├── database/
-│   └── repositories/
-│
-├── models/
-│
-├── ui/
-│   ├── bloc/
-│   ├── layouts/
-│   ├── screens/
-│   └── widgets/
-│
-└── main.dart
-State Management
+- Add, edit, and delete contacts  
+- View contact details  
+- Mark/unmark favorite contacts  
+- Separate Favorites screen  
+- Search contacts instantly  
+- Direct Call, SMS, and Email actions  
+- Responsive UI for different screen sizes  
+- Loading, empty, and error state handling  
 
-The application uses BLoC for state management.
+---
 
-Events
-LoadContactsEvent
-AddContactEvent
-UpdateContactEvent
-DeleteContactEvent
-ToggleFavouriteEvent
-GetContactByIdEvent
-SearchContactEvent
-State
+## 🛠 Tech Stack
 
-The ContactState manages:
+- Flutter  
+- Dart  
+- SQLite  
+- flutter_bloc  
+- go_router  
+- url_launcher  
+- Material 3  
 
-Contact list
-Filtered contacts
-Selected contact
-Loading state
-Success messages
-Error messages
-Search query
-Database
+---
 
-SQLite is used for offline data storage.
+## 🏗 Architecture
 
-Contact Table
-CREATE TABLE Contact(
-  Id INTEGER PRIMARY KEY AUTOINCREMENT,
-  Name TEXT NOT NULL,
-  Phone TEXT NOT NULL,
-  Email TEXT,
-  Company TEXT,
-  Notes TEXT,
-  IsFavourite INTEGER NOT NULL DEFAULT 0
-)
-Main Screens
-Home Screen
+The application follows **Clean Architecture** with separate layers:
 
-Contains bottom navigation with:
+- UI  
+- BLoC (State Management)  
+- Repository  
+- Database  
 
-Contacts
-Favorites
-Contact Screen
+---
 
-Displays all contacts with search functionality.
+## 📦 Main Modules
 
-Favorite Screen
+### 📇 Contacts Screen
+Displays all saved contacts with search support.
 
-Displays only favorite contacts.
+### ⭐ Favorites Screen
+Shows favorite contacts separately.
 
-Contact Details Screen
+### 👤 Contact Details Screen
+Displays complete contact information with quick action buttons.
 
-Displays:
+### 💾 Database
+SQLite is used for offline contact storage.
 
-Contact avatar
-Phone
-Email
-Company
-Notes
-Call button
-Message button
-Mail button
-Packages Used
-dependencies:
-  flutter_bloc:
-  go_router:
-  equatable:
-  sqflite:
-  path:
-  url_launcher:
+---
+
+## 🧾 Contact Fields
+
+- Name  
+- Phone Number  
+- Email  
+- Company  
+- Notes  
+- Favorite Status  
+
+---
+
+## 🔄 State Management
+
+BLoC pattern is used for:
+
+- Loading contacts  
+- Adding contacts  
+- Updating contacts  
+- Deleting contacts  
+- Searching contacts  
+- Managing favorites  
+
+---
+
+## 📚 Packages Used
+
+- flutter_bloc  
+- go_router  
+- sqflite  
+- equatable  
+- url_launcher  
+
+---
+
+## 🚀 Installation
+
+```bash
+flutter pub get
+flutter run
+flutter build apk --release
